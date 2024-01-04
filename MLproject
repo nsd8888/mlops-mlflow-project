@@ -8,7 +8,6 @@ entry_points:
       alpha: {type: float, default: 0.5}
       l1_ratio: {type: float, default: 0.5}
     command: |
-      python train.py \
-        --alpha {alpha} \
-        --l1_ratio {l1_ratio}
-
+        python3 train.py \
+          --alpha {alpha} \
+          --l1_ratio {l1_ratio}
