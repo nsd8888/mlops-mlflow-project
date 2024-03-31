@@ -89,20 +89,12 @@ if __name__ == "__main__":
         signature = infer_signature(train_x, predictions)
 
         ## For Remote server only(DAGShub)
-
-    
         mlflow_tracking_uri="https://dagshub.com/nsd8888/mlops-mlflow.mlflow"
-        # MLFLOW_TRACKING_USERNAME="nsd8888"
-        # MLFLOW_TRACKING_PASSWORD="4ba6357cf461a8fb63f8bd0a797cf96be9d75932"
-
         mlflow.set_tracking_uri(mlflow_tracking_uri)
-
-
-
         tracking_url_type_store = urlparse(mlflow.get_tracking_uri()).scheme
 
-        # Model registry does not work with file store
-        print(tracking_url_type_store)
+        
+        # Model registry does not work with file stor
         if tracking_url_type_store != "file":
             # Register the model
             # There are other ways to use the Model Registry, which depends on the use case,
