@@ -102,7 +102,7 @@ if __name__ == "__main__":
             # https://mlflow.org/docs/latest/model-registry.html#api-workflow
 
             mlflow.sklearn.log_model(
-                lr, "model", registered_model_name="ElasticnetWineModel"
+                lr, "model", signature = signature, registered_model_name="ElasticnetWineModel"
             )
         else:
             mlflow.sklearn.log_model(lr, "model")
